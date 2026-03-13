@@ -35,6 +35,7 @@ html {
         url("/assets/fonts/kind-bond.otf") format("woff");
     font-weight: 700;
     font-style: normal;
+    font-display: swap;
 }
 
 body {
