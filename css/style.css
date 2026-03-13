@@ -1,0 +1,241 @@
+:root {
+
+    /* Brand Colors */
+    /* --color-primary: #FFD23D; */
+    --color-primary: #3B7A57;
+    --color-secondary: #DC4920;
+
+    /* Text Colors */
+    --color-text-main: #333333;
+    --color-text-light: #6b7280;
+
+    /* Background */
+    --color-bg-main: #ffffff;
+    --color-bg-light: #f9fafb;
+
+    /* Border */
+    --color-border: #e5e7eb;
+
+    /* Radius */
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+
+    /* Spacing */
+    --space-section: 100px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: "Kindbond";
+    src: url("/assets/fonts/kind-bond.otf") format("woff2"),
+        url("/assets/fonts/kind-bond.otf") format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    color: var(--color-text-main);
+    background: var(--color-bg-main);
+}
+
+h1,
+h2 {
+    font-family: 'Kindbond', cursive;
+
+}
+
+/* Section spacing */
+/* .section {
+    padding-top: var(--space-section);
+    padding-bottom: var(--space-section);
+} */
+
+/* Container */
+.container-custom {
+    max-width: 1400px;
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Button */
+.btn-primary {
+    background-color: #F97316;
+    color: #ffffff;
+    padding: 14px 26px;
+    border-radius: 999px;
+    font-size: 16px;
+    font-weight: 700;
+    border: 3px solid #6B3E2E;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #EA580C;
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile specific styles for btn-primary */
+@media (max-width: 1023px) {
+    .btn-primary {
+        padding: 10px 20px;
+        font-size: 14px;
+        border: 2px solid #6B3E2E;
+    }
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-marquee {
+    display: flex;
+    width: max-content;
+    animation: marquee 50s linear infinite;
+}
+
+
+
+
+.card-hover {
+    transition: transform 0.18s, box-shadow 0.18s;
+    cursor: pointer;
+}
+
+.card-hover:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(124, 92, 191, 0.13);
+}
+
+.option-card {
+    transition: all 0.15s;
+    cursor: pointer;
+}
+
+.option-card:hover {
+    border-color: #7c5cbf;
+    background: #f0eaff;
+}
+
+.option-card.selected {
+    border-color: #7c5cbf;
+    background: #ede8fb;
+}
+
+.progress-seg {
+    height: 6px;
+    border-radius: 9px;
+    background: #e0d9f5;
+    flex: 1;
+    margin: 0 3px;
+    overflow: hidden;
+}
+
+.progress-seg-fill {
+    height: 100%;
+    background: #2f6b4f;
+    border-radius: 9px;
+    width: 0;
+    transition: width 0.4s;
+}
+
+.pack-card {
+    border-radius: 16px;
+    padding: 20px;
+}
+
+.explorer-card {
+    background: #eaf5e9;
+}
+
+.dreamer-card {
+    background: #fff8e8;
+}
+
+.adventure-card {
+    background: #fef3e2;
+}
+
+.thinker-card {
+    background: #fce8f0;
+}
+
+/* Section transitions */
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section.active {
+    animation: fadeIn 0.3s ease;
+}
+
+
+.btn-yellow {
+    background: #f0c030;
+    color: #5a3d00;
+    border-radius: 9999px;
+    padding: 10px 22px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    transition: background 0.15s;
+}
+
+.btn-yellow:hover {
+    background: #dbb020;
+}
+
+.btn-back {
+    background: none;
+    border: none;
+    color: #FFD23D;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 4px 0;
+}
+
+.btn-back:hover {
+    text-decoration: underline;
+}
+
+.result-pack {
+    border-radius: 16px;
+    padding: 28px;
+    text-align: center;
+}
