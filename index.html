@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>The Reading Elf | Magical Children's Bookstore</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="The Reading Elf is a magical children's bookstore where kids explore stories, imagination, and creativity.">
+
+    <meta name="keywords" content="kids books, children bookstore, kids reading space, story books">
+
+    <meta name="author" content="The Reading Elf">
+
+    <link rel="icon" href="/assets/images/logo.png">
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="bg-white text-gray-800">
+
+    <header class="w-full absolute top-0 left-0 z-50">
+        <div class=" max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+
+            <!-- Logo -->
+            <a href="/" class="flex items-center gap-2">
+                <img src="/assets/images/logo.png" alt="logo" class=" w-[50px] lg:w-[127px]  object-contain">
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center bg-white  py-4 px-6 rounded-full  gap-[32px] text-[16px] font-bold">
+                <a href="#book" class="hover:text-orange-500">Discover Books</a>
+                <a href="#about" class="hover:text-orange-500">About</a>
+                <a href="#experience" class="hover:text-orange-500">Experiences</a>
+                <a href="#gallery" class="hover:text-orange-500">Our Gallery</a>
+                <a href="#events" class="hover:text-orange-500">Events</a>
+            </nav>
+            <!-- CTA Button -->
+            <div class="hidden lg:block">
+                <a href="#contact" class="btn-primary">
+                    VISIT STORE
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menuBtn" class="lg:hidden text-2xl">
+                ☰
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu"
+            class="fixed inset-y-0 left-0 w-3/4 max-w-sm bg-white shadow-lg z-50 transform -translate-x-full transition-transform duration-300 lg:hidden px-6 py-6 space-y-4 overflow-y-auto">
+            <!-- Logo inside mobile menu -->
+            <a href="/" class="flex items-center gap-2 mb-6">
+                <img src="/assets/images/logo.png" alt="logo" class="w-[50px] object-contain">
+            </a>
+            <a href="#book" class="block">Discover Books</a>
+            <a href="#about" class="block">About</a>
+            <a href="#experience" class="block">Experiences</a>
+            <a href="#gallery" class="block">Our Gallery</a>
+            <a href="#events" class="block">Events</a>
+
+            <!-- Close button for mobile menu, if desired -->
+            <!-- <button class="absolute top-4 right-4 text-gray-600" onclick="closeMobileMenu()">✕</button> -->
+
+            <a href="#contact" class="btn-primary">
+                VISIT STORE
+            </a>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobileMenuOverlay" class="fixed inset-0 bg-black opacity-50 z-40 hidden lg:hidden"></div>
+
+    <main>
+
+        <section id="hero"
+            class="relative bg-[url('/assets/images/banner.png')] bg-cover bg-center min-h-[100dvh] flex items-center">
+
+            <div class="max-w-4xl mx-auto px-6 text-center">
+
+                <!-- Top Badge -->
+                <div class="inline-block bg-[#008BED] text-white p-[8px_16px] rounded-full text-[16px] italic mb-6">
+                    Chennai's first reading experience store studio
+                </div>
+
+                <!-- Main Heading -->
+                <h1 class="text-4xl md:text-6xl font-bold text-[#6B3E2E] leading-tight mb-4">
+                    Where Children
+                </h1>
+
+                <h2 class="text-3xl md:text-5xl font-bold text-orange-500 mb-6">
+                    Fall in love with Reading
+                </h2>
+
+                <!-- Description -->
+                <p class="text-[#333] max-w-3xl mx-auto text-[14px] md:text-[20px] font-normal mb-10">
+                    A magical bookstore designed to help kids discover the right books,
+                    build lifelong reading habits, and experience stories in ways they'll
+                    never forget.
+                </p>
+
+                <!-- CTA Button -->
+                <a href="#" class="btn-primary">
+                    FINDING YOUR CHILD’S READING PERSONALITY →
+                </a>
+
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="absolute bottom-6 left-0 w-full bg-[#7B3F00]/80 overflow-hidden py-4">
+
+                <div class="flex whitespace-nowrap animate-marquee gap-8 text-white text-sm md:text-base">
+
+                    <div class="flex items-center gap-6">
+                        <span>A Reading Experience Studio</span>
+                        <span>•</span>
+                        <span>Where stories come alive</span>
+                        <span>•</span>
+                        <span>Where stories come alive</span>
+                        <span>•</span>
+                        <span>Where stories come alive</span>
+                    </div>
+
+                    <!-- Duplicate for seamless loop -->
+                    <div class="flex items-center gap-6">
+                        <span>A Reading Experience Studio</span>
+                        <span>•</span>
+                        <span>Where stories come alive</span>
+                        <span>•</span>
+                        <span>Where stories come alive</span>
+                        <span>•</span>
+                        <span>Where stories come alive</span>
+                    </div>
+                    <!-- Duplicate for seamless loop -->
+                    <div class="flex items-center gap-6">
+                        <span>A Reading Experience Studio</span>
+                        <span>•</span>
+                        <span>Where stories come alive</span>
+                        <span>•</span>
+                        <span>Where stories come alive</span>
+                        <span>•</span>
+                        <span>Where stories come alive</span>
+                    </div>
+                    <!-- Duplicate for seamless loop -->
+                    <div class="flex items-center gap-6">
+                        <span>A Reading Experience Studio</span>
+                        <span>•</span>
+                        <span>Where stories come alive</span>
+                        <span>•</span>
+                        <span>Where stories come alive</span>
+                        <span>•</span>
+                        <span>Where stories come alive</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="about" class="w-full">
+
+            <div class="flex flex-col md:flex-row w-full min-h-[650px]">
+
+                <!-- LEFT SIDE -->
+                <div class="md:w-[60%] bg-[#FEFFE0] py-16">
+
+                    <div class="max-w-7xl mx-auto px-6 md:px-16 lg:px-24">
+
+                        <div class="max-w-[720px]">
+
+                            <!-- Title -->
+                            <div class="flex items-center gap-3 mb-6 relative">
+
+                                <img src="/assets/images/book.png" class="absolute -top-16 -left-10 w-16 md:w-24">
+
+                                <h2 class="text-3xl md:text-5xl lg:text-[60px] font-bold text-[#6B3E2E]">
+                                    Our Story
+                                </h2>
+
+                            </div>
+
+                            <!-- Quote -->
+                            <p class="italic text-gray-700 mb-6 text-lg md:text-xl lg:text-2xl">
+                                "If the bookstore we imagine doesn't exist yet <br>
+                                <span class="text-green-700">then let's build it."</span>
+                            </p>
+
+                            <!-- Paragraph -->
+                            <p class="text-[#333333] mb-6 leading-relaxed text-base md:text-lg lg:text-xl">
+                                The Reading Elf was born from a tender moment a mother
+                                searching for magic for her little boy. We spent afternoons
+                                wandering bookshops, but he always imagined somewhere
+                                more alive.
+                            </p>
+
+                            <p class="text-[#333333] mb-10 leading-relaxed text-base md:text-lg lg:text-xl">
+                                A place where children could giggle, wander, sit on the
+                                floor, and simply be themselves between pages.
+                            </p>
+
+                            <a href="#" class="btn-primary">
+                                SEE WHAT WE BUILT →
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RIGHT SIDE -->
+                <div class="md:w-[40%] bg-[#C8452E] relative flex items-center justify-center py-20 md:py-0">
+
+                    <!-- Image Card -->
+                    <div class="md:absolute md:-left-24 z-[2]">
+
+                        <div class=" rounded-[30px]">
+
+                            <img src="/assets/images/story.png"
+                                class="rounded-[25px] w-[260px] sm:w-[300px] md:w-[340px] object-cover">
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Mushroom -->
+                    <div class="absolute right-0 bottom-0 w-[150px] md:w-[220px] z-[1]">
+
+                        <img src="/assets/images/mushroom.png" class="w-full">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <section id="book" class="bg-[#2F6B4F] py-16 md:py-20 relative overflow-hidden">
+
+            <!-- Heading -->
+            <div class="text-center mb-12 md:mb-20 px-4">
+                <h2 class="text-white text-3xl md:text-5xl lg:text-[60px] font-normal leading-tight">
+                    Find the Perfect Book for Your Child
+                </h2>
+
+                <p class="text-white text-base md:text-xl lg:text-[24px] mt-4 max-w-3xl mx-auto">
+                    Browse curated reading packs or take a quick quiz to get personalized
+                    recommendations.
+                </p>
+            </div>
+
+
+
+
+            <!-- Main Content -->
+            <div class="max-w-7xl mx-auto px-4 relative z-[2]">
+
+
+
+                <!-- ===== SECTION: Home ===== -->
+                <div id="section-home" class="section active max-w-4xl mx-auto">
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                        <!-- Card 1 -->
+                        <div
+                            class="bg-[#F3E8D0] rounded-[28px] p-6 md:px-8 md:py-12 shadow-sm text-center md:text-left">
+
+                            <img src="./assets/images/book-1.png"
+                                class="w-[80px] h-[80px] md:w-[96px] md:h-[96px] mx-auto md:mx-0 mb-4" />
+
+                            <h3 class="text-lg md:text-xl font-semibold text-gray-800 mb-3">
+                                Explore Curated Reading Packs
+                            </h3>
+
+                            <p class="text-gray-600 text-sm md:text-base mb-6">
+                                Browse reading packs designed for different types of young readers.
+                            </p>
+
+                            <button class="btn-primary w-full md:w-auto"
+                                onclick="showSection('section-packs'); event.stopPropagation()">
+                                EXPLORE PACKS →
+                            </button>
+
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div
+                            class="bg-[#F3E8D0] rounded-[28px] p-6 md:px-8 md:py-12 shadow-sm text-center md:text-left">
+
+                            <img src="./assets/images/book-2.png"
+                                class="w-[80px] h-[80px] md:w-[96px] md:h-[96px] mx-auto md:mx-0 mb-4" />
+
+                            <h3 class="text-lg md:text-xl font-semibold text-gray-800 mb-3">
+                                Find the Perfect Books with a Quiz
+                            </h3>
+
+                            <p class="text-gray-600 text-sm md:text-base mb-6">
+                                Answer a few quick questions and get personalized book recommendations.
+                            </p>
+
+                            <button class="btn-primary w-full md:w-auto" onclick="startQuiz(); event.stopPropagation()">
+                                TAKE QUIZ →
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ===== SECTION: Reading Packs ===== -->
+                <div id="section-packs" class="section">
+
+                    <button class="btn-back mb-6" onclick="showSection('section-home')">← Back</button>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                        <!-- Explorer -->
+                        <div class="pack-card explorer-card shadow-sm card-hover">
+                            <div class="text-4xl mb-3">🌍</div>
+                            <h3 class="font-extrabold text-gray-800 text-base mb-1">Explorer Pack</h3>
+                            <p class="text-xs text-gray-500 mb-3">For curious kids who love discovery</p>
+                            <div class="flex items-center gap-1 text-xs text-gray-500 mb-1">👤 Age: 6–9 &nbsp;·&nbsp; 6
+                                books</div>
+                            <div class="flex flex-wrap gap-1 my-3 text-lg">🏔️🌿💧🌸🦁📖</div>
+                            <p class="font-extrabold text-gray-800 text-lg mb-3">₹999<span
+                                    class="text-xs font-normal text-gray-400">/month</span></p>
+                            <button class="btn-primary w-full text-sm">Order Reading Pack</button>
+                        </div>
+
+                        <!-- Dreamer -->
+                        <div class="pack-card dreamer-card shadow-sm card-hover">
+                            <div class="text-4xl mb-3">🧚</div>
+                            <h3 class="font-extrabold text-gray-800 text-base mb-1">Dreamer Pack</h3>
+                            <p class="text-xs text-gray-500 mb-3">Fantasy and imagination stories</p>
+                            <div class="flex items-center gap-1 text-xs text-gray-500 mb-1">👤 Age: 5–8 &nbsp;·&nbsp; 6
+                                books</div>
+                            <div class="flex flex-wrap gap-1 my-3 text-lg">🌙⭐🦋✨🌈🎠</div>
+                            <p class="font-extrabold text-gray-800 text-lg mb-3">₹999<span
+                                    class="text-xs font-normal text-gray-400">/month</span></p>
+                            <button class="btn-primary w-full text-sm">Order Reading Pack</button>
+                        </div>
+
+                        <!-- Adventure -->
+                        <div class="pack-card adventure-card shadow-sm card-hover">
+                            <div class="text-4xl mb-3">🗺️</div>
+                            <h3 class="font-extrabold text-gray-800 text-base mb-1">Adventure Pack</h3>
+                            <p class="text-xs text-gray-500 mb-3">Action and exciting journeys</p>
+                            <div class="flex items-center gap-1 text-xs text-gray-500 mb-1">👤 Age: 7–10 &nbsp;·&nbsp; 6
+                                books</div>
+                            <div class="flex flex-wrap gap-1 my-3 text-lg">⛵🧭🏹🦅🌋🏆</div>
+                            <p class="font-extrabold text-gray-800 text-lg mb-3">₹999<span
+                                    class="text-xs font-normal text-gray-400">/month</span></p>
+                            <button class="btn-primary w-full text-sm">Order Reading Pack</button>
+                        </div>
+
+                        <!-- Thinker -->
+                        <div class="pack-card thinker-card shadow-sm card-hover">
+                            <div class="text-4xl mb-3">🧠</div>
+                            <h3 class="font-extrabold text-gray-800 text-base mb-1">Thinker Pack</h3>
+                            <p class="text-xs text-gray-500 mb-3">Science and knowledge books</p>
+                            <div class="flex items-center gap-1 text-xs text-gray-500 mb-1">👤 Age: 8–12 &nbsp;·&nbsp; 5
+                                books</div>
+                            <div class="flex flex-wrap gap-1 my-3 text-lg">🔬🚀🧪💡🔭📊</div>
+                            <p class="font-extrabold text-gray-800 text-lg mb-3">₹999<span
+                                    class="text-xs font-normal text-gray-400">/month</span></p>
+                            <button class="btn-primary w-full text-sm">Order Reading Pack</button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ===== SECTION: Quiz ===== -->
+                <div id="section-quiz" class="section ">
+                    <button class="btn-back mb-4" id="quiz-back-btn" onclick="quizBack()">← Back</button>
+
+                    <div class="bg-[#F3E8D0] rounded-2xl p-8  shadow-sm">
+
+                        <!-- Progress Bar -->
+                        <div class="flex mb-5" id="quiz-progress">
+                            <div class="progress-seg">
+                                <div class="progress-seg-fill" id="prog-0"></div>
+                            </div>
+                            <div class="progress-seg">
+                                <div class="progress-seg-fill" id="prog-1"></div>
+                            </div>
+                            <div class="progress-seg">
+                                <div class="progress-seg-fill" id="prog-2"></div>
+                            </div>
+                            <div class="progress-seg">
+                                <div class="progress-seg-fill" id="prog-3"></div>
+                            </div>
+                        </div>
+
+                        <p class="text-xs text-gray-400 mb-1" id="quiz-counter">Question 1 of 4</p>
+                        <h2 class="text-lg font-extrabold text-gray-800 mb-5" id="quiz-question">What does your child
+                            enjoy most?</h2>
+
+                        <div class="grid grid-cols-2 gap-3" id="quiz-options">
+                            <!-- Options rendered by JS -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== SECTION: Result ===== -->
+                <div id="section-result" class="section">
+                    <button class="btn-back mb-4" onclick="showSection('section-home')">← Back</button>
+
+                    <div class="bg-white rounded-2xl p-8 max-w-md mx-auto shadow-sm text-center">
+                        <div class="text-5xl mb-2">🎉</div>
+                        <h2 class="font-extrabold text-gray-700 text-base mb-5">Recommended Reading Pack</h2>
+
+                        <div class="result-pack mb-5" id="result-pack-card">
+                            <div class="text-5xl mb-3" id="result-emoji">🌍</div>
+                            <h3 class="font-extrabold text-gray-800 text-xl mb-1" id="result-name">Explorer Pack</h3>
+                            <p class="text-sm text-gray-500 mb-4" id="result-desc">For curious kids who love discovery
+                            </p>
+                            <div class="flex flex-wrap justify-center gap-1 my-3 text-xl" id="result-books">
+                                🏔️🌿💧🌸🦁📖</div>
+                            <p class="font-extrabold text-gray-800 text-xl mt-2">₹999<span
+                                    class="text-xs font-normal text-gray-400">/month</span></p>
+                        </div>
+
+                        <button class="btn-primary w-full mb-3">Order This Pack</button>
+                        <button class="btn-back text-sm" onclick="startQuiz()">Retake Quiz</button>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <div class="absolute left-0 right-0 bottom-0 h-[357px] w-full z-[1]">
+                <img src="./assets/images/book-bg.png" class="w-full h-[357px]" />
+
+            </div>
+
+        </section>
+
+        <section class="px-6 py-16 bg-[#FEFFE0]" id="experience">
+            <div class="max-w-7xl mx-auto ">
+                <!-- Title -->
+                <div class="mb-12 text-center">
+                    <p class="text-xs tracking-widest text-green-900 mb-3">INSIDE THE STORE</p>
+
+                    <h2 class="text-5xl font-semibold text-green-900 leading-tight">
+                        <h2 class="text-3xl md:text-5xl font-semibold text-green-900 leading-tight">
+                            for <span class="text-orange-500 italic">Experiences</span>
+                        </h2>
+
+                        <p class="text-gray-600 mt-4 ">
+                            Every corner of The Reading Elf is designed to spark curiosity,
+                            not just sell books.
+                        </p>
+                </div>
+
+                <!-- Cards Layout -->
+                <div class="grid md:grid-cols-3 gap-6">
+
+                    <!-- Big Left Card -->
+                    <div
+                        class="bg-[#2F6B4F] text-white rounded-2xl p-8 flex flex-col justify-between md:row-span-2 min-h-[420px]">
+                        <div>
+                            <div class="text-2xl mb-4">🕯️</div>
+
+                            <h3 class="text-xl font-semibold mb-3">
+                                The Story Cave
+                            </h3>
+
+                            <p class="text-sm text-gray-200 leading-relaxed">
+                                A cozy storytelling nook where weekend sessions bring books to life
+                                — dramatic readings, puppet storytelling, author visits. Kids leave
+                                with memories that last longer than any book.
+                            </p>
+
+                            <p class="text-xs mt-4 text-gray-300">
+                                Every Saturday at 11am. Free with store visit.
+                            </p>
+                        </div>
+
+                        <span class="bg-green-800 px-4 py-1 text-xs rounded-full w-fit mt-6">
+                            Weekend Sessions
+                        </span>
+                    </div>
+
+                    <!-- Card 1 -->
+                    <div class="bg-[#e6dcc9] rounded-2xl p-6">
+                        <div class="text-xl mb-3">🧩</div>
+
+                        <h3 class="text-lg font-semibold text-green-900 mb-2">
+                            Discovery Zone
+                        </h3>
+
+                        <p class="text-sm text-gray-600 mb-4">
+                            A 2-minute tablet quiz at the entrance — kids discover their
+                            reading personality before they even pick a book.
+                        </p>
+
+                        <span class="bg-green-200 text-green-800 text-xs px-3 py-1 rounded-full">
+                            Interactive
+                        </span>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="bg-[#dfe6e2] rounded-2xl p-6">
+                        <div class="text-xl mb-3">📦</div>
+
+                        <h3 class="text-lg font-semibold text-green-900 mb-2">
+                            Build Your Library Station
+                        </h3>
+
+                        <p class="text-sm text-gray-600 mb-4">
+                            Curated book bundles for every personality. Take home a whole
+                            starter library in one pick.
+                        </p>
+
+                        <span class="bg-green-200 text-green-800 text-xs px-3 py-1 rounded-full">
+                            Curated Bundles
+                        </span>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="bg-[#f3ead8] rounded-2xl p-6">
+                        <div class="text-xl mb-3">🏆</div>
+
+                        <h3 class="text-lg font-semibold text-green-900 mb-2">
+                            Reading Challenge Wall
+                        </h3>
+
+                        <p class="text-sm text-gray-600 mb-4">
+                            Kids track books, earn badges, and see their name on the Wall
+                            of Readers.
+                        </p>
+
+                        <span class="bg-orange-200 text-orange-700 text-xs px-3 py-1 rounded-full">
+                            Gamification
+                        </span>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="bg-[#c97f2a] text-white rounded-2xl p-6">
+                        <div class="text-xl mb-3">👩‍👦</div>
+
+                        <h3 class="text-lg font-semibold mb-2">
+                            Mom & Me Reading Club
+                        </h3>
+
+                        <p class="text-sm text-orange-100 mb-4">
+                            Weekly parent-child sessions. Read together, discuss,
+                            act it out. Bonding through books, every week.
+                        </p>
+
+                        <span class="bg-orange-200 text-orange-800 text-xs px-3 py-1 rounded-full">
+                            Weekly Club
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+        </section>
+        <section class="px-6 py-24 bg-[#2F6B4F] flex justify-center items-center relative" id="gallery">
+            <div class="relative z-[3]">
+                <img src="./assets/images/gallery.png" alt="">
+            </div>
+            <div class="absolute right-10 bottom-0 hidden md:block">
+                <img src="./assets/images/mushroom.png" alt="">
+            </div>
+            <div class="absolute left-10 top-0">
+                <img src="./assets/images/book.png" alt="">
+            </div>
+
+        </section>
+        <section class=" px-6 py-16 bg-[#FEFFE0]" id="events">
+            <div class="max-w-7xl mx-auto">
+
+                <!-- Header -->
+                <div class="flex justify-center items-end mb-10 flex-wrap gap-4">
+
+                    <div class="text-center">
+                        <p class="text-xs tracking-widest text-green-900 mb-3">UPCOMING</p>
+
+                        <h2 class="text-4xl md:text-5xl font-semibold text-green-900 leading-tight">
+                            Stories That Happen Live
+                        </h2>
+                    </div>
+
+
+                </div>
+
+
+                <!-- Cards -->
+                <div class="grid md:grid-cols-4 gap-6">
+
+                    <!-- BIG CARD -->
+                    <div class="md:col-span-2 bg-white rounded-2xl overflow-hidden grid md:grid-cols-2">
+
+                        <!-- Left Image -->
+                        <div class=" flex items-center justify-center">
+                            <img src="./assets/images/left.png" class="h-full " alt="">
+                            <!-- <span class="text-7xl">🧙‍♂️</span> -->
+                        </div>
+
+                        <!-- Content -->
+                        <div class="p-8 flex flex-col justify-center">
+
+                            <p class="text-xs text-gray-500 mb-3">
+                                SUNDAY, MARCH 15 • 09:30 AM ONWARDS
+                            </p>
+
+                            <h3 class="text-xl font-semibold text-green-900 mb-3">
+                                The Reading Elf – Soft Launch
+                            </h3>
+
+                            <p class="text-gray-600 text-sm mb-6">
+                                You're warmly invited to the soft launch of The Reading Elf —
+                                a magical little world of stories, imagination, and childhood wonder.
+                            </p>
+
+                            <ul class="space-y-2 text-sm text-gray-700">
+                                <li>Chief Guest: Mrs. Omana Thomas</li>
+                                <li>Dr. Priya Biswakumar</li>
+                                <li>Lighting of the Lamp</li>
+                                <li>First Look at the Store</li>
+                                <li>Breakfast & Conversations</li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+
+                    <!-- CARD 2 -->
+                    <div class="bg-white rounded-2xl overflow-hidden">
+
+                        <div
+                            class="bg-gradient-to-b from-yellow-200 to-yellow-100 flex items-center justify-center h-36">
+                            <span class="text-4xl">✍️</span>
+                        </div>
+
+                        <div class="p-6">
+                            <p class="text-xs text-gray-500 mb-2">
+                                MARCH 22 • 3:00 PM
+                            </p>
+
+                            <h3 class="text-lg font-semibold text-green-900 mb-2">
+                                Little Writers Workshop
+                            </h3>
+
+                            <p class="text-sm text-gray-600 mb-4">
+                                Write your own mini story, illustrate it,
+                                and take it home.
+                            </p>
+
+                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">
+                                ₹299
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <!-- CARD 3 -->
+                    <div class="bg-white rounded-2xl overflow-hidden">
+
+                        <div class="bg-gradient-to-b from-green-600 to-green-400 flex items-center justify-center h-36">
+                            <span class="text-4xl">🌿</span>
+                        </div>
+
+                        <div class="p-6">
+
+                            <p class="text-xs text-gray-500 mb-2">
+                                MARCH 29 • 10:00 AM
+                            </p>
+
+                            <h3 class="text-lg font-semibold text-green-900 mb-2">
+                                Author Morning with Roopa Pai
+                            </h3>
+
+                            <p class="text-sm text-gray-600 mb-4">
+                                Meet the author. Ask questions.
+                                Get a signed copy.
+                            </p>
+
+                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">
+                                Seats Limited
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+        </section>
+        <section class="bg-[#2F6B4F] py-16">
+            <div class="max-w-7xl mx-auto px-6">
+
+                <!-- Heading -->
+                <div class="mb-12 text-center text-white">
+                    <p class="text-xs tracking-widest  mb-3">COMMUNITY</p>
+
+                    <h2 class="text-3xl md:text-5xl font-semibold  mb-4">
+                        The Reading Elf Community
+                    </h2>
+
+                    <p class=" ">
+                        Parents, kids, and teachers who believe in the magic of books —
+                        sharing stories, reviews, and reading wins.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+
+                    <!-- Card 1 - Priya Krishnan -->
+                    <div class="relative bg-white rounded-2xl shadow-xl  px-7 pt-5 pb-7 overflow-hidden">
+                        <div
+                            class="absolute -right-5 -top-2 w-28 h-28 rounded-full border-[22px] border-gray-200 opacity-30">
+                        </div>
+                        <div
+                            class="absolute right-8 top-10 w-16 h-16 rounded-full border-[14px] border-gray-200 opacity-20">
+                        </div>
+
+                        <div
+                            class="absolute top-0 left-0 bg-orange-500 rounded-tl-2xl rounded-br-2xl px-5 py-2 flex items-center gap-1">
+                            <span class="text-white text-base">★</span>
+                            <span class="text-white text-base">★</span>
+                            <span class="text-white text-base">★</span>
+                            <span class="text-white text-base">★</span>
+                            <span class="text-white text-base">★</span>
+                        </div>
+
+                        <div class="h-8 mb-4"></div>
+
+                        <p class="text-gray-800 text-sm leading-relaxed mb-6" style="font-family:'DM Sans',sans-serif;">
+                            "My daughter used to resist reading. After three visits to The Reading Elf and a Discovery
+                            Quiz, she now reads before bed every night without being told. Something shifted."
+                        </p>
+
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-9 h-9 rounded-full bg-green-700 flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                                P</div>
+                            <div>
+                                <p class="text-gray-800 text-sm font-semibold leading-tight"
+                                    style="font-family:'DM Sans',sans-serif;">Priya Krishnan</p>
+                                <p class="text-gray-400 text-xs" style="font-family:'DM Sans',sans-serif;">Mother of a
+                                    7-year-old · Chennai</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 - Shikha Menon -->
+                    <div class="relative bg-white rounded-2xl shadow-xl  px-7 pt-5 pb-7 overflow-hidden">
+                        <div
+                            class="absolute -right-5 -top-2 w-28 h-28 rounded-full border-[22px] border-gray-200 opacity-30">
+                        </div>
+                        <div
+                            class="absolute right-8 top-10 w-16 h-16 rounded-full border-[14px] border-gray-200 opacity-20">
+                        </div>
+
+                        <div
+                            class="absolute top-0 left-0 bg-orange-500 rounded-tl-2xl rounded-br-2xl px-5 py-2 flex items-center gap-1">
+                            <span class="text-white text-base">★</span>
+                            <span class="text-white text-base">★</span>
+                            <span class="text-white text-base">★</span>
+                            <span class="text-white text-base">★</span>
+                            <span class="text-white text-base">★</span>
+                        </div>
+
+                        <div class="h-8 mb-4"></div>
+
+                        <p class="text-gray-800 text-sm leading-relaxed mb-6" style="font-family:'DM Sans',sans-serif;">
+                            "As a school principal, I've seen many programs. What The Reading Elf does is different —
+                            they understand children, not just books. The workshop we did was something our kids are
+                            still talking about."
+                        </p>
+
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-9 h-9 rounded-full bg-yellow-500 flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                                S</div>
+                            <div>
+                                <p class="text-gray-800 text-sm font-semibold leading-tight"
+                                    style="font-family:'DM Sans',sans-serif;">Shikha Menon</p>
+                                <p class="text-gray-400 text-xs" style="font-family:'DM Sans',sans-serif;">Principal ·
+                                    Shishya School</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 - Aarav, Age 9 -->
+                    <div class="relative bg-white rounded-2xl shadow-xl  px-7 pt-5 pb-7 overflow-hidden">
+                        <div
+                            class="absolute -right-5 -top-2 w-28 h-28 rounded-full border-[22px] border-gray-200 opacity-30">
+                        </div>
+                        <div
+                            class="absolute right-8 top-10 w-16 h-16 rounded-full border-[14px] border-gray-200 opacity-20">
+                        </div>
+
+                        <div
+                            class="absolute top-0 left-0 bg-orange-500 rounded-tl-2xl rounded-br-2xl px-5 py-2 flex items-center gap-1">
+                            <span class="text-white text-base">★</span>
+                            <span class="text-white text-base">★</span>
+                            <span class="text-white text-base">★</span>
+                            <span class="text-white text-base">★</span>
+                            <span class="text-white text-base">★</span>
+                        </div>
+
+                        <div class="h-8 mb-4"></div>
+
+                        <p class="text-gray-800 text-sm leading-relaxed mb-6" style="font-family:'DM Sans',sans-serif;">
+                            "I finished 12 books this year! I'm a Silver Reader now and I get my name on the wall. My
+                            friends are trying to catch up to me."
+                        </p>
+
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-9 h-9 rounded-full bg-orange-400 flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                                A</div>
+                            <div>
+                                <p class="text-gray-800 text-sm font-semibold leading-tight"
+                                    style="font-family:'DM Sans',sans-serif;">Aarav, Age 9</p>
+                                <p class="text-gray-400 text-xs flex items-center gap-1"
+                                    style="font-family:'DM Sans',sans-serif;">Silver Reader 🏆</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="py-20 bg-[#F3E8D0]" id="contact">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 items-center"> <!-- LEFT CONTENT -->
+                    <div>
+                        <p class="text-xs tracking-widest text-yellow-600 mb-3"> — FIND US </p>
+                        <h2 class="text-3xl md:text-5xl font-semibold text-green-900 mb-4"> Come See Us <br> in Chennai
+                        </h2>
+                        <p class="text-gray-600 max-w-md mb-8"> A cozy, carefully designed space where books are just
+                            the beginning. Drop in, explore, and let your child wander. </p> <!-- Timings -->
+                        <div class="space-y-4 mb-8">
+                            <div class="flex justify-between border-b pb-2 border-[#b5b5b5] text-sm"> <span
+                                    class="font-medium text-gray-700">Monday – Friday</span> <span
+                                    class="text-gray-600">10:00 AM – 7:00 PM</span> </div>
+                            <div class="flex justify-between border-b pb-2 border-[#b5b5b5] text-sm"> <span
+                                    class="font-medium text-gray-700">Saturday</span> <span class="text-gray-600">9:00
+                                    AM – 8:00 PM (Story Day!)</span> </div>
+                            <div class="flex justify-between border-b border-[#b5b5b5] pb-2 text-sm"> <span
+                                    class="font-medium text-gray-700">Sunday</span> <span class="text-gray-600">10:00 AM
+                                    – 6:00 PM</span> </div>
+                        </div> <!-- Button --> <a href="https://maps.app.goo.gl/vLZBBCbZ7ofcA2vN8" target="_blank"
+                            class="btn-primary">
+                            Get Directions → </a>
+                    </div> <!-- RIGHT MAP -->
+                    <div class="rounded-2xl overflow-hidden shadow-lg h-[350px]"> <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3888.4575884839096!2d80.239775!3d12.942544999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTLCsDU2JzMzLjIiTiA4MMKwMTQnMjMuMiJF!5e0!3m2!1sen!2sin!4v1773282152572!5m2!1sen!2sin"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe> </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="relative bg-[#2F6B4F] text-white pt-16 pb-16 overflow-hidden">
+
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+
+            <!-- LEFT -->
+            <div>
+                <h2 class="text-xl font-semibold mb-4">The Reading Elf</h2>
+                <p class="text-sm leading-relaxed max-w-xs">
+                    A magical space where kids discover the joy of books,
+                    stories, and imagination.
+                </p>
+            </div>
+
+            <!-- CENTER -->
+            <div>
+                <h3 class="font-semibold mb-4">Quick Links</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#book" class="block">Discover Books</a></li>
+                    <li><a href="#about" class="block">About</a></li>
+                    <li><a href="#experience" class="block">Experiences</a></li>
+                    <li><a href="#gallery" class="block">Our Gallery</a></li>
+                    <li><a href="#events" class="block">Events</a></li>
+                </ul>
+            </div>
+
+            <!-- RIGHT -->
+            <div>
+                <h3 class="font-semibold mb-4">Follow Us</h3>
+
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 flex items-center justify-center bg- rounded-full">
+                        <img src="./assets/images/instagram.svg" alt="">
+                    </a>
+
+                    <a href="#" class="w-10 h-10 flex items-center justify-center bg- rounded-full">
+                        <img src="./assets/images/facebook.svg" alt="">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- divider -->
+        <div class="max-w-7xl mx-auto mt-10 border-t border-white/40"></div>
+
+        <!-- copyright -->
+        <p class="text-center text-sm mt-6">
+            © 2026 The Reading Elf. All rights reserved.
+            <br class="md:hidden">
+            <span class="hidden md:inline mx-2 text-white/50">|</span>
+            <a href="privacy-policy.html" class="hover:text-orange-300 ml-2 md:ml-0">Privacy Policy</a>
+            <span class="mx-2 text-white/50">•</span>
+            <a href="terms-conditions.html" class="hover:text-orange-300">Terms & Conditions</a>
+        </p>
+
+
+
+    </footer>
+
+
+
+
+
+    <script>
+        const btn = document.getElementById("menuBtn");
+        const menu = document.getElementById("mobileMenu");
+        const overlay = document.getElementById("mobileMenuOverlay");
+
+        btn.addEventListener("click", () => {
+            menu.classList.toggle("-translate-x-full");
+            menu.classList.toggle("translate-x-0");
+            overlay.classList.toggle("hidden");
+        });
+
+        overlay.addEventListener("click", () => {
+            menu.classList.add("-translate-x-full");
+            menu.classList.remove("translate-x-0");
+            overlay.classList.add("hidden");
+        });
+    </script>
+
+    <script>
+        // --- Section management ---
+        function showSection(id) {
+            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+
+        // --- Quiz data ---
+        const questions = [
+            {
+                q: "What does your child enjoy most?",
+                options: [
+                    { emoji: "🌍", label: "Explorer", value: "explorer" },
+                    { emoji: "🧚", label: "Dreamer", value: "dreamer" },
+                    { emoji: "🗺️", label: "Adventurer", value: "adventure" },
+                    { emoji: "🧠", label: "Thinker", value: "thinker" },
+                ]
+            },
+            {
+                q: "What is their reading level?",
+                options: [
+                    { emoji: "🐣", label: "Beginner", value: "beginner" },
+                    { emoji: "📗", label: "Intermediate", value: "intermediate" },
+                    { emoji: "📘", label: "Advanced", value: "advanced" },
+                ]
+            },
+            {
+                q: "How old is your child?",
+                options: [
+                    { emoji: "🍼", label: "4–6 years", value: "4-6" },
+                    { emoji: "🧒", label: "7–9 years", value: "7-9" },
+                    { emoji: "👦", label: "10–12 years", value: "10-12" },
+                ]
+            },
+            {
+                q: "What topics fascinate them?",
+                options: [
+                    { emoji: "🔭", label: "Science", value: "thinker" },
+                    { emoji: "🏕️", label: "Adventures", value: "adventure" },
+                    { emoji: "🌸", label: "Nature", value: "explorer" },
+                    { emoji: "✨", label: "Fantasy", value: "dreamer" },
+                ]
+            }
+        ];
+
+        const packs = {
+            explorer: { name: "Explorer Pack", emoji: "🌍", desc: "For curious kids who love discovery", books: "🏔️🌿💧🌸🦁📖", bg: "#eaf5e9" },
+            dreamer: { name: "Dreamer Pack", emoji: "🧚", desc: "Fantasy and imagination stories", books: "🌙⭐🦋✨🌈🎠", bg: "#fff8e8" },
+            adventure: { name: "Adventure Pack", emoji: "🗺️", desc: "Action and exciting journeys", books: "⛵🧭🏹🦅🌋🏆", bg: "#fef3e2" },
+            thinker: { name: "Thinker Pack", emoji: "🧠", desc: "Science and knowledge books", books: "🔬🚀🧪💡🔭📊", bg: "#fce8f0" },
+        };
+
+        let currentQ = 0;
+        let answers = [];
+
+        function startQuiz() {
+            currentQ = 0;
+            answers = [];
+            renderQuestion();
+            showSection('section-quiz');
+        }
+
+        function renderQuestion() {
+            const q = questions[currentQ];
+            document.getElementById('quiz-counter').textContent = `Question ${currentQ + 1} of ${questions.length}`;
+            document.getElementById('quiz-question').textContent = q.q;
+
+            // Progress bar
+            for (let i = 0; i < 4; i++) {
+                const fill = document.getElementById(`prog-${i}`);
+                fill.style.width = i < currentQ ? '100%' : (i === currentQ ? '50%' : '0');
+            }
+
+            // Options
+            const container = document.getElementById('quiz-options');
+            container.innerHTML = '';
+            q.options.forEach(opt => {
+                const div = document.createElement('div');
+                div.className = 'option-card border-2 border-gray-100 rounded-xl p-4 flex flex-col items-start gap-2 bg-white';
+                div.innerHTML = `<span class="text-3xl">${opt.emoji}</span><span class="font-bold text-gray-700 text-sm">${opt.label}</span>`;
+                div.onclick = () => selectOption(opt.value, div);
+                container.appendChild(div);
+            });
+        }
+
+        function selectOption(value, el) {
+            // Highlight
+            document.querySelectorAll('.option-card').forEach(c => c.classList.remove('selected'));
+            el.classList.add('selected');
+
+            answers.push(value);
+
+            setTimeout(() => {
+                currentQ++;
+                if (currentQ < questions.length) {
+                    renderQuestion();
+                } else {
+                    // Fill last bar
+                    document.getElementById(`prog-3`).style.width = '100%';
+                    setTimeout(showResult, 300);
+                }
+            }, 350);
+        }
+
+        function showResult() {
+            // Count pack votes
+            const counts = { explorer: 0, dreamer: 0, adventure: 0, thinker: 0 };
+            answers.forEach(a => { if (counts[a] !== undefined) counts[a]++; });
+            const best = Object.entries(counts).sort((a, b) => b[1] - a[1])[0][0];
+            const pack = packs[best];
+
+            document.getElementById('result-emoji').textContent = pack.emoji;
+            document.getElementById('result-name').textContent = pack.name;
+            document.getElementById('result-desc').textContent = pack.desc;
+            document.getElementById('result-books').textContent = pack.books;
+            document.getElementById('result-pack-card').style.background = pack.bg;
+
+            showSection('section-result');
+            overlay.classList.add("hidden"); // Hide overlay when quiz result is shown
+        }
+
+        function quizBack() {
+            if (currentQ === 0) {
+                showSection('section-home');
+            } else {
+                currentQ--;
+                answers.pop();
+                renderQuestion();
+            }
+        }
+    </script>
+
+</body>
+
+</html>
