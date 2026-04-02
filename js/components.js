@@ -34,6 +34,10 @@
     path.endsWith('/index.html') ||
     path.endsWith('/index');
 
+  const isAbout =
+    path.endsWith('/about.html') ||
+    path.endsWith('/about');
+
   // Prefix for links that point to index.html sections
   const home = isHome ? '' : 'index.html';
 
@@ -64,7 +68,8 @@
         </div>
 
         <!-- Mobile Menu Toggle -->
-        <button id="menuBtn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu" class="lg:hidden text-2xl">
+        <button id="menuBtn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu" 
+                class="lg:hidden text-2xl ${isAbout ? 'text-white' : 'text-gray-800'}">
           ☰
         </button>
       </div>
