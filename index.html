@@ -23,6 +23,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./css/style.css">
 
+    <!-- Shared header/footer component -->
+    <script src="./js/components.js" defer></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -32,59 +35,8 @@
 
 <body class="bg-white text-gray-800">
 
-    <header class="w-full absolute top-0 left-0 z-50">
-        <div class=" max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-
-            <!-- Logo -->
-            <a href="/" class="flex items-center gap-2">
-                <img src="/assets/images/logo.webp" alt="logo" class=" w-[50px] lg:w-[127px]  object-contain">
-            </a>
-
-            <!-- Desktop Navigation -->
-            <nav class="hidden lg:flex items-center bg-white  py-4 px-6 rounded-full  gap-[32px] text-[16px] font-bold">
-                <a href="#book" class="hover:text-orange-500">Discover Books</a>
-                <a href="#story" class="hover:text-orange-500">Our Story</a>
-                <a href="#experience" class="hover:text-orange-500">Experiences</a>
-                <a href="#gallery" class="hover:text-orange-500">Our Gallery</a>
-                <a href="#events" class="hover:text-orange-500">Events</a>
-            </nav>
-            <!-- CTA Button -->
-            <div class="hidden lg:block">
-                <a href="#contact" class="btn-primary">
-                    VISIT STORE
-                </a>
-            </div>
-
-            <!-- Mobile Menu Button -->
-            <button id="menuBtn" class="lg:hidden text-2xl">
-                ☰
-            </button>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobileMenu"
-            class="fixed inset-y-0 left-0 w-3/4 max-w-sm bg-white shadow-lg z-50 transform -translate-x-full transition-transform duration-300 lg:hidden px-6 py-6 space-y-4 overflow-y-auto">
-            <!-- Logo inside mobile menu -->
-            <a href="/" class="flex items-center gap-2 mb-6">
-                <img src="/assets/images/logo.webp" alt="logo" class="w-[50px] object-contain">
-            </a>
-            <a href="#book" class="block">Discover Books</a>
-            <a href="#story" class="block">Our Story</a>
-            <a href="#experience" class="block">Experiences</a>
-            <a href="#gallery" class="block">Our Gallery</a>
-            <a href="#events" class="block">Events</a>
-
-            <!-- Close button for mobile menu, if desired -->
-            <!-- <button class="absolute top-4 right-4 text-gray-600" onclick="closeMobileMenu()">✕</button> -->
-
-            <a href="#contact" class="btn-primary">
-                VISIT STORE
-            </a>
-        </div>
-    </header>
-
-    <!-- Mobile Menu Overlay -->
-    <div id="mobileMenuOverlay" class="fixed inset-0 bg-black opacity-50 z-40 hidden lg:hidden"></div>
+    <!-- Shared Header (injected by js/components.js) -->
+    <div id="site-header"></div>
 
     <main>
 
@@ -182,13 +134,13 @@
 
                     <div class="max-w-7xl mx-auto px-6 md:px-24 lg:px-24">
 
-                        <div class="max-w-[720px]">
+                        <div class="max-w-[720px] text-center md:text-left">
 
                             <!-- Title -->
-                            <div class="flex items-center gap-3 mb-6 relative">
+                            <div class="flex items-center justify-center md:justify-start gap-3 mb-6 relative">
 
                                 <img src="/assets/images/book.webp" alt="Decorative open book"
-                                    class="absolute -top-16 -left-10 w-16 md:w-24">
+                                    class="absolute -top-16 left-1/2 -translate-x-1/2 md:left-0 md:-translate-x-10 w-16 md:w-24">
 
                                 <h2 class="text-3xl md:text-5xl lg:text-[60px] font-bold text-[#6B3E2E]">
                                     Our Story
@@ -334,7 +286,9 @@
                             </h3>
 
                             <p class="text-gray-600 text-sm md:text-base mb-6">
-                                Every child reads differently. This quiz helps us understand your child’s interests and reading level. Based on that, we’ll suggest books that match their pace and make reading more enjoyable.
+                                Every child reads differently. This quiz helps us understand your child’s interests and
+                                reading level. Based on that, we’ll suggest books that match their pace and make reading
+                                more enjoyable.
                             </p>
 
                             <button class="btn-primary w-full md:w-auto" onclick="; event.stopPropagation()">
@@ -612,7 +566,7 @@
             </div>
 
         </section>
-        <section class=" px-6 py-16 bg-[#FEFFE0] hidden" id="events">
+        <section class=" px-6 py-16 bg-[#FEFFE0] " id="events">
             <div class="max-w-7xl mx-auto">
 
                 <!-- Header -->
@@ -626,7 +580,6 @@
                         </h2>
                     </div>
 
-
                 </div>
 
 
@@ -634,37 +587,84 @@
                 <div class="flex justify-center">
 
                     <!-- BIG CARD -->
-                    <div class="md:w-3/4 bg-white rounded-2xl overflow-hidden grid md:grid-cols-2">
+                    <div class="max-w-6xl w-full bg-white rounded-2xl shadow-xl overflow-hidden grid md:grid-cols-2">
 
                         <!-- Left Image -->
-                        <div class="flex items-center justify-center">
+                        <div class="h-[280px] md:h-auto overflow-hidden">
                             <img src="./assets/images/left.webp" class="w-full h-full object-cover"
                                 alt="Event thumbnail">
                         </div>
 
                         <!-- Content -->
-                        <div class="p-8 flex flex-col justify-center">
+                        <div class="p-6 md:p-12 flex flex-col justify-center text-center md:text-left">
 
-                            <p class="text-xs text-gray-500 mb-3">
-                                SUNDAY, MARCH 15 • 09:30 AM ONWARDS
+                            <p class="text-xs font-bold text-orange-500 mb-3 uppercase tracking-widest">
+                                Friday – Sunday | 17, 18, 19 April • 6:30 PM Onwards
                             </p>
 
-                            <h3 class="text-xl font-semibold text-green-900 mb-3">
-                                The Reading Elf – Soft Launch
+                            <h3 class="text-2xl md:text-3xl font-semibold text-green-900 mb-4">
+                                Starry Night Adventure – <span class="text-orange-500 italic">Kids Workshop</span>
                             </h3>
 
-                            <p class="text-gray-600 text-sm mb-6">
-                                You're warmly invited to the soft launch of The Reading Elf —
-                                a magical little world of stories, imagination, and childhood wonder.
-                            </p>
+                            <div class="text-gray-600 text-sm mb-6 space-y-3 leading-relaxed">
+                                <p>Step into a magical world of stars, stories, and creativity.</p>
+                                <p>The Reading Elf warmly invites your child to a 3-day interactive experience filled
+                                    with learning, imagination, and fun. This special workshop is designed to help
+                                    children explore the night sky, enjoy storytelling, and create something they can
+                                    proudly take home.</p>
+                            </div>
 
-                            <ul class="space-y-2 text-sm text-gray-700">
-                                <li>Chief Guest: Mrs. Omana Thomas</li>
-                                <li>Dr. Priya Biswakumar</li>
-                                <li>Lighting of the Lamp</li>
-                                <li>First Look at the Store</li>
-                                <li>Breakfast & Conversations</li>
-                            </ul>
+                            <!-- Experience Breakdown -->
+                            <div class="space-y-4 mb-8">
+                                <h4 class="text-xs font-bold text-gray-400 uppercase">What Your Child Will Experience
+                                </h4>
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                                    <div class="bg-[#F3E8D0] p-3 rounded-xl border border-gray-100">
+                                        <p class="font-bold text-orange-700 text-[10px] mb-1">DAY 1</p>
+                                        <p class="text-green-900 font-semibold text-xs mb-1">Explore the Sky</p>
+                                        <p class="text-[10px] text-gray-600 leading-tight">Stars, constellations &
+                                            observation</p>
+                                    </div>
+                                    <div class="bg-[#F3E8D0] p-3 rounded-xl border border-gray-100">
+                                        <p class="font-bold text-orange-700 text-[10px] mb-1">DAY 2</p>
+                                        <p class="text-green-900 font-semibold text-xs mb-1">Stories & Craft</p>
+                                        <p class="text-[10px] text-gray-600 leading-tight">Reading & creative activities
+                                        </p>
+                                    </div>
+                                    <div class="bg-[#F3E8D0] p-3 rounded-xl border border-gray-100">
+                                        <p class="font-bold text-orange-700 text-[10px] mb-1">DAY 3</p>
+                                        <p class="text-green-900 font-semibold text-xs mb-1">Create & Take</p>
+                                        <p class="text-[10px] text-gray-600 leading-tight">Make moon lamp & certificate
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Footer Details -->
+                            <div class="border-t border-gray-100 pt-6 space-y-4">
+                                <div class="flex flex-wrap gap-x-6 gap-y-3 text-sm">
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-gray-400">📍</span>
+                                        <span class="text-gray-700 font-medium">Cozy Rooftop, Thoraipakkam</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-green-700 font-bold">₹3500</span>
+                                        <span class="text-gray-500 text-xs">/per child (full workshop)</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col sm:flex-row items-center gap-4">
+                                    <a href="https://wa.me/919500056482" target="_blank"
+                                        class="btn-primary w-full sm:w-auto text-center py-3">
+                                        RESERVE SPOT VIA WHATSAPP →
+                                    </a>
+                                    <div class="flex flex-col text-center sm:text-left">
+                                        <span class="text-[10px] text-red-500 font-bold uppercase animate-pulse">⚠️
+                                            Limited Seats</span>
+                                        <span class="text-[11px] text-gray-400">Call: 9500056482</span>
+                                    </div>
+                                </div>
+                            </div>
 
                         </div>
                     </div>
@@ -672,6 +672,60 @@
                 </div>
             </div>
         </section>
+
+
+
+        <!-- ═══════════════════════════════════════════════════
+             FASCINATING FLAGS SECTION
+        ════════════════════════════════════════════════════ -->
+        <section id="flags-book" class="bg-white py-16 md:py-24">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center gap-12 md:gap-20">
+
+                    <!-- ── LEFT: Image with Yellow Frame ── -->
+                    <div class="flex-1 order-1 flex justify-center">
+                        <div class="relative">
+                            <div class="overflow-hidden
+                                        w-[280px] sm:w-[320px] md:w-[360px] lg:w-[400px]">
+                                <img src="/assets/images/flags-book.webp" alt="Fascinating Flags for Fun Book"
+                                    class="w-full object-cover block">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ── RIGHT: Text & CTA ── -->
+                    <div class="flex-1 order-2 text-center md:text-left">
+
+                        <!-- Main Heading — Colors: Brown text + Blue highlighted words -->
+                        <h2 class="text-4xl md:text-5xl lg:text-[60px] text-[#6B3E2E] mb-2 leading-tight">
+                            Fascinating <span class="text-[#2B4B8E]">Flags</span> <br>
+                            for <span class="text-[#2B4B8E]">Fun</span>
+                        </h2>
+
+                        <!-- Sub-header -->
+                        <p class="text-gray-500 text-base md:text-lg mb-8 font-medium">Book Written By Shwetha</p>
+
+                        <!-- Body Text -->
+                        <div class="space-y-4 text-[#333] text-base md:text-lg leading-relaxed mb-10 max-w-lg">
+                            <p>A book created with the same spirit as The Reading Elf.</p>
+                            <p>It introduces children to flags from around the world in a way that feels fun and
+                                engaging.</p>
+                            <p>Instead of memorizing, children explore, recognize, and enjoy learning.</p>
+                            <p>It's not just a book. It's a playful way to discover the world.</p>
+                        </div>
+
+                        <!-- CTA Button: Using Site-Wide btn-primary style -->
+                        <a href="https://www.amazon.in/Fascinating-Flags-Adhruth-Subbiah-Balakrishnan/dp/9395731044/"
+                            target="_blank" rel="nofollow" class="btn-primary">
+                            BUY IT ON AMAZON →
+                        </a>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
         <section class="bg-[#FEFFE0] py-16">
             <div class="max-w-7xl mx-auto px-6">
 
@@ -849,112 +903,15 @@
         </section>
 
     </main>
-    <!-- 
-    <div id="fb-root"></div>
 
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0">
-    </script>
-
-    <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-width="380"
-        data-height="500" data-adapt-container-width="true">
-    </div> -->
-
-    <!-- FOOTER -->
-    <footer class="relative bg-[#2F6B4F] text-white pt-16 pb-16 overflow-hidden">
-
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
-
-            <!-- LEFT -->
-            <div>
-                <h2 class="text-xl font-semibold mb-4">The Reading Elf</h2>
-                <p class="text-sm leading-relaxed max-w-xs">
-                    A magical space where kids discover the joy of books,
-                    stories, and imagination.
-                </p>
-            </div>
-
-            <!-- CENTER -->
-            <div>
-                <h3 class="font-semibold mb-4">Quick Links</h3>
-                <ul class="space-y-2 text-sm">
-                    <li><a href="#book" class="block">Discover Books</a></li>
-                    <li><a href="#story" class="block">Our Story</a></li>
-                    <li><a href="#experience" class="block">Experiences</a></li>
-                    <li><a href="#gallery" class="block">Our Gallery</a></li>
-                    <li><a href="#events" class="block">Events</a></li>
-                </ul>
-            </div>
-
-            <!-- RIGHT -->
-            <div>
-                <h3 class="font-semibold mb-4">Reach Us</h3>
-                <!-- Social Icons -->
-                <div class="flex gap-4 mb-4">
-                    <a href="https://www.instagram.com/thereadingelf_hub/" target="_blank"
-                        class="w-10 h-10 flex items-center justify-center rounded-full">
-                        <img src="./assets/images/instagram.svg" alt="Instagram logo">
-                    </a>
-
-                    <a href="https://www.facebook.com/people/The-Reading-Elf-Hub/61583765232952/" target="_blank"
-                        class="w-10 h-10 flex items-center justify-center rounded-full">
-                        <img src="./assets/images/facebook.svg" alt="Facebook logo">
-                    </a>
-                </div>
-
-                <!-- Mobile Number -->
-                <p class=" text-sm">
-                    📞 <a href="tel:+919500056482" class="hover:underline">
-                        +91 9500056482
-                    </a>
-                </p>
-
-
-            </div>
-
-        </div>
-
-        <!-- divider -->
-        <div class="max-w-7xl mx-auto mt-10 border-t border-white/40"></div>
-
-        <!-- copyright -->
-        <p class="text-center text-sm mt-6">
-            © 2026 The Reading Elf. All rights reserved.
-            <br class="md:hidden">
-            <span class="hidden md:inline mx-2 text-white/50">|</span>
-            <a href="privacy-policy.html" class="hover:text-orange-300 ml-2 md:ml-0">Privacy Policy</a>
-            <span class="mx-2 text-white/50">•</span>
-            <a href="terms-conditions.html" class="hover:text-orange-300">Terms & Conditions</a>
-        </p>
-        <p class="text-center text-sm mt-2 text-white/80">
-            Built by <a href="https://www.easttheory.com/" target="_blank" rel="nofollow"
-                class="hover:text-orange-300">EastTheory.com</a>
-        </p>
-
-
-
-    </footer>
+    <!-- Shared Footer (injected by js/components.js) -->
+    <div id="site-footer"></div>
 
 
 
 
 
-    <script>
-        const btn = document.getElementById("menuBtn");
-        const menu = document.getElementById("mobileMenu");
-        const overlay = document.getElementById("mobileMenuOverlay");
-
-        btn.addEventListener("click", () => {
-            menu.classList.toggle("-translate-x-full");
-            menu.classList.toggle("translate-x-0");
-            overlay.classList.toggle("hidden");
-        });
-
-        overlay.addEventListener("click", () => {
-            menu.classList.add("-translate-x-full");
-            menu.classList.remove("translate-x-0");
-            overlay.classList.add("hidden");
-        });
-    </script>
+    <!-- Mobile menu logic is now handled inside js/components.js -->
 
     <script>
         // --- Section management ---

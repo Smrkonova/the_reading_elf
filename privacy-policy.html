@@ -12,6 +12,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./css/style.css">
 
+    <!-- Shared header/footer component -->
+    <script src="./js/components.js" defer></script>
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,62 +26,10 @@
 
 <body class="bg-[#FEFFE0] text-gray-800">
 
-    <!-- Header -->
-    <header class="w-full relative top-0 left-0 z-50">
-        <div class=" max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+    <!-- Shared Header (injected by js/components.js) -->
+    <div id="site-header"></div>
 
-            <!-- Logo -->
-            <a href="index.html" class="flex items-center gap-2">
-                <img src="/assets/images/logo.webp" alt="logo" class=" w-[50px] lg:w-[127px]  object-contain">
-            </a>
-
-            <!-- Desktop Navigation -->
-            <nav class="hidden lg:flex items-center bg-white  py-4 px-6 rounded-full  gap-[32px] text-[16px] font-bold">
-                <a href="index.html#book" class="hover:text-orange-500">Discover Books</a>
-                <a href="index.html#story" class="hover:text-orange-500">Our Story</a>
-                <a href="index.html#experience" class="hover:text-orange-500">Experiences</a>
-                <a href="index.html#gallery" class="hover:text-orange-500">Our Gallery</a>
-                <a href="index.html#events" class="hover:text-orange-500">Events</a>
-            </nav>
-            <!-- CTA Button -->
-            <div class="hidden lg:block">
-                <a href="index.html#contact" class="btn-primary">
-                    VISIT STORE
-                </a>
-            </div>
-
-            <!-- Mobile Menu Button -->
-            <button id="menuBtn" class="lg:hidden text-2xl">
-                ☰
-            </button>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobileMenu"
-            class="fixed inset-y-0 left-0 w-3/4 max-w-sm bg-white shadow-lg z-50 transform -translate-x-full transition-transform duration-300 lg:hidden px-6 py-6 space-y-4 overflow-y-auto">
-            <!-- Logo inside mobile menu -->
-            <a href="index.html" class="flex items-center gap-2 mb-6">
-                <img src="/assets/images/logo.webp" alt="logo" class="w-[50px] object-contain">
-            </a>
-            <a href="index.html#book" class="block">Discover Books</a>
-            <a href="index.html#story" class="block">Our Story</a>
-            <a href="index.html#experience" class="block">Experiences</a>
-            <a href="index.html#gallery" class="block">Our Gallery</a>
-            <a href="index.html#events" class="block">Events</a>
-
-            <!-- Close button for mobile menu, if desired -->
-            <!-- <button class="absolute top-4 right-4 text-gray-600" onclick="closeMobileMenu()">✕</button> -->
-
-            <a href="index.html#contact" class="btn-primary">
-                VISIT STORE
-            </a>
-        </div>
-    </header>
-
-    <!-- Mobile Menu Overlay -->
-    <div id="mobileMenuOverlay" class="fixed inset-0 bg-black opacity-50 z-40 hidden lg:hidden"></div>
-
-    <main class="max-w-4xl mx-auto px-6 py-12 bg-white lg:my-10 rounded-2xl shadow-sm">
+    <main class="max-w-4xl mx-auto px-6 py-12 bg-white lg:my-10 rounded-2xl shadow-sm text-center md:text-left">
 
         <h1 class="text-3xl md:text-4xl mb-2">Privacy Policy</h1>
         <p class="text-sm text-gray-500 mb-8">Last Updated: March 2026</p>
@@ -92,7 +43,7 @@
         <section class="mb-8">
             <h2 class="text-2xl mb-4">1. Information We Collect</h2>
             <p>We may collect the following types of information:</p>
-            <ul>
+            <ul class="list-inside">
                 <li><strong>Personal Information:</strong> Name, email address, phone number, and payment information
                     when you purchase a Reading Pack, book an event, or sign up for our newsletter.</li>
                 <li><strong>Child Information:</strong> We may collect information about your child's age, reading
@@ -106,7 +57,7 @@
         <section class="mb-8">
             <h2 class="text-2xl mb-4">2. How We Use Your Information</h2>
             <p>We use the collected information for the following purposes:</p>
-            <ul>
+            <ul class="list-inside">
                 <li>To provide and manage our services, including the "Explorer," "Dreamer," "Adventure," and "Thinker"
                     reading packs.</li>
                 <li>To organize and manage events, workshops, and the "Mom & Me Reading Club."</li>
@@ -147,97 +98,10 @@
 
     </main>
 
-    <!-- Footer -->
-    <footer class="relative bg-[#2F6B4F] text-white pt-16 pb-16 overflow-hidden">
+    <!-- Shared Footer (injected by js/components.js) -->
+    <div id="site-footer"></div>
 
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
-
-            <!-- LEFT -->
-            <div>
-                <h2 class="text-xl font-semibold mb-4">The Reading Elf</h2>
-                <p class="text-sm leading-relaxed max-w-xs">
-                    A magical space where kids discover the joy of books,
-                    stories, and imagination.
-                </p>
-            </div>
-
-            <!-- CENTER -->
-            <div>
-                <h3 class="font-semibold mb-4">Quick Links</h3>
-                <ul class="space-y-2 text-sm">
-                    <li><a href="#book" class="block">Discover Books</a></li>
-                    <li><a href="#story" class="block">Our Story</a></li>
-                    <li><a href="#experience" class="block">Experiences</a></li>
-                    <li><a href="#gallery" class="block">Our Gallery</a></li>
-                    <li><a href="#events" class="block">Events</a></li>
-                </ul>
-            </div>
-
-            <!-- RIGHT -->
-            <div>
-                <h3 class="font-semibold mb-4">Reach Us</h3>
-                <!-- Social Icons -->
-                <div class="flex gap-4 mb-4">
-                    <a href="https://www.instagram.com/thereadingelf_hub/" target="_blank"
-                        class="w-10 h-10 flex items-center justify-center rounded-full">
-                        <img src="./assets/images/instagram.svg" alt="Instagram logo">
-                    </a>
-
-                    <a href="https://www.facebook.com/people/The-Reading-Elf-Hub/61583765232952/" target="_blank"
-                        class="w-10 h-10 flex items-center justify-center rounded-full">
-                        <img src="./assets/images/facebook.svg" alt="Facebook logo">
-                    </a>
-                </div>
-
-                <!-- Mobile Number -->
-                <p class=" text-sm">
-                    📞 <a href="tel:+919500056482" class="hover:underline">
-                        +91 9500056482
-                    </a>
-                </p>
-
-
-            </div>
-
-        </div>
-
-        <!-- divider -->
-        <div class="max-w-7xl mx-auto mt-10 border-t border-white/40"></div>
-
-        <!-- copyright -->
-        <p class="text-center text-sm mt-6">
-            © 2026 The Reading Elf. All rights reserved.
-            <br class="md:hidden">
-            <span class="hidden md:inline mx-2 text-white/50">|</span>
-            <a href="privacy-policy.html" class="hover:text-orange-300 ml-2 md:ml-0">Privacy Policy</a>
-            <span class="mx-2 text-white/50">•</span>
-            <a href="terms-conditions.html" class="hover:text-orange-300">Terms & Conditions</a>
-        </p>
-        <p class="text-center text-sm mt-2 text-white/80">
-            Built by <a href="https://www.easttheory.com/" target="_blank" rel="nofollow" class="hover:text-orange-300">EastTheory.com</a>
-        </p>
-
-
-
-    </footer>
-
-    <script>
-        const btn = document.getElementById("menuBtn");
-        const menu = document.getElementById("mobileMenu");
-        const overlay = document.getElementById("mobileMenuOverlay");
-
-        btn.addEventListener("click", () => {
-            menu.classList.toggle("-translate-x-full");
-            menu.classList.toggle("translate-x-0");
-            overlay.classList.toggle("hidden");
-        });
-
-        overlay.addEventListener("click", () => {
-            menu.classList.add("-translate-x-full");
-            menu.classList.remove("translate-x-0");
-            overlay.classList.add("hidden");
-        });
-    </script>
+    <!-- Mobile menu logic is now handled inside js/components.js -->
 
 </body>
 
