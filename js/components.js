@@ -300,8 +300,8 @@
           <img src="/assets/images/book-month.png" alt="Book cover">
           </span>
           <div id="botm-card-text">
-            <h4>The Aru Shah and<br>the End of Time</h4>
-            <p>Roshani Chokshi · Ages 10+</p>
+            <h4>The Very Hungry Caterpillar</h4>
+            <p>Book by Eric Carle</p>
           </div>
         </div>
       </div>
