@@ -289,25 +289,25 @@
       }
     </style>
 
-    <a href="hungry-caterpillar.html" id="botm-widget">
-      <div id="botm-card" role="region" aria-label="Book of the Month" style="position:relative;">
-        <!-- Close button -->
-        <button id="botm-close" aria-label="Close Book of the Month widget" title="Close">✕</button>
+   <div id="botm-widget">
+  <div id="botm-card" role="region" aria-label="Book of the Month" style="position:relative;">
+    
+    <button id="botm-close" aria-label="Close Book of the Month widget" title="Close">✕</button>
 
-        <div id="botm-card-label">📚 Book of the Month</div>
-        <div id="botm-card-body">
-          <!-- Replace src with your image path and remove style="display:none" -->
-          <img id="botm-book-img" src="" alt="Book cover" style="display:none;">
-          <span id="botm-book-fallback">
-          <img src="/assets/images/book-month.png" alt="Book cover">
-          </span>
-          <div id="botm-card-text">
-            <h4>The Very Hungry Caterpillar</h4>
-            <p>Book by Eric Carle</p>
-          </div>
-        </div>
+    <div id="botm-card-label">📚 Book of the Month</div>
+    <div id="botm-card-body">
+      <img id="botm-book-img" src="" alt="Book cover" style="display:none;">
+      <span id="botm-book-fallback">
+        <img src="/assets/images/book-month.png" alt="Book cover">
+      </span>
+      <div id="botm-card-text">
+        <h4>The Very Hungry Caterpillar</h4>
+        <p>Book by Eric Carle</p>
       </div>
-    </a>
+    </div>
+
+  </div>
+</div>
   `;
 
   // ─── Inject on DOM ready ─────────────────────────────────────────────────────
