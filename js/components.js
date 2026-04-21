@@ -26,7 +26,9 @@
     path.endsWith('/index.html') ||
     path.endsWith('/index') ||
     path.endsWith('/about.html') ||
-    path.endsWith('/about');
+    path.endsWith('/about') ||
+    path.endsWith('/hungry-caterpillar.html') ||
+    path.endsWith('/hungry-caterpillar');
 
   const isHome =
     path === '/' ||
@@ -69,7 +71,7 @@
 
         <!-- Mobile Menu Toggle -->
         <button id="menuBtn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu" 
-                class="lg:hidden text-2xl ${isAbout ? 'text-white' : 'text-gray-800'}">
+                class="lg:hidden text-2xl ${isAbout || path.includes('hungry-caterpillar') ? 'text-[#2F6B4F]' : 'text-[#2F6B4F]'}">
           ☰
         </button>
       </div>
@@ -190,7 +192,7 @@
         width: 230px;
         box-shadow: 0 8px 32px rgba(0,0,0,0.3), 0 2px 8px rgba(0,0,0,0.18);
         backdrop-filter: blur(8px);
-        cursor: default;
+        cursor: pointer;
         transition: transform 0.2s ease, box-shadow 0.2s ease;
       }
       #botm-card:hover {
@@ -287,7 +289,7 @@
       }
     </style>
 
-    <div id="botm-widget">
+    <a href="hungry-caterpillar.html" id="botm-widget">
       <div id="botm-card" role="region" aria-label="Book of the Month" style="position:relative;">
         <!-- Close button -->
         <button id="botm-close" aria-label="Close Book of the Month widget" title="Close">✕</button>
@@ -305,7 +307,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </a>
   `;
 
   // ─── Inject on DOM ready ─────────────────────────────────────────────────────
@@ -330,9 +332,18 @@
 
       const closeBtn = document.getElementById('botm-close');
       const widget = document.getElementById('botm-widget');
+      const card = document.getElementById('botm-card');
 
-      if (closeBtn && widget) {
-        closeBtn.addEventListener('click', () => {
+      if (closeBtn && widget && card) {
+        // Navigate on card click
+        card.addEventListener('click', (e) => {
+          // Don't navigate if clicking the close button
+          if (e.target.id === 'botm-close') return;
+          window.location.href = '/hungry-caterpillar.html';
+        });
+
+        closeBtn.addEventListener('click', (e) => {
+          e.stopPropagation(); // Prevent card click
           widget.classList.add('botm-hiding');
           widget.addEventListener('animationend', () => {
             widget.style.display = 'none';
