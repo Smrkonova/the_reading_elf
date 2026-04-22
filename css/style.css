@@ -187,6 +187,53 @@ h2 {
     display: block;
 }
 
+/* Personality Quiz Styles */
+.step-section {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.step-section.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.option-btn {
+    width: 100%;
+    text-align: left;
+    padding: 10px 16px;
+    background: #f9fafb;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: 600;
+    color: #374151;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.option-btn span {
+    color: #f97316;
+    font-weight: 800;
+}
+
+.option-btn:hover {
+    background: #fff;
+    border-color: #f97316;
+    transform: translateX(8px);
+    box-shadow: 0 4px 12px rgba(249, 115, 22, 0.1);
+}
+
+.option-btn:active {
+    transform: scale(0.98);
+}
+
 /* Fade animation */
 @keyframes fadeIn {
     from {
