@@ -3,7 +3,7 @@
  * Logic for navigation, scoring, and data submission.
  */
 
-const scriptURL = 'https://script.google.com/macros/s/AKfycbwOB35dK9qt5SfKYxkp-x9CMPUfLHVF8CDlHcUaxiunysMzqZnV2_c4v9e40pNVcPqa/exec'; // User needs to update this
+const scriptURL = 'https://script.google.com/macros/s/AKfycbyp6ZBksnhrssVRFcLYDSxBMy47AmqikXZ_VUKpjVN5VnO0qLN77BQYh7tvh7cNZi4pRA/exec'; // User needs to update this
 
 let currentStep = 0;
 const totalSteps = 7; // Intro, User Info, 5 Questions, Result
