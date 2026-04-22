@@ -133,7 +133,6 @@ function calculateResult() {
 function displayResult(result) {
     document.getElementById('result-title').innerText = result.title;
     document.getElementById('result-desc').innerText = result.desc;
-    document.getElementById('result-book').innerText = `Your Book: ${result.book}`;
 
     currentStep = 7;
     showStep(currentStep);
