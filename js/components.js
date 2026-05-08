@@ -298,11 +298,11 @@
     <div id="botm-card-body">
       <img id="botm-book-img" src="" alt="Book cover" style="display:none;">
       <span id="botm-book-fallback">
-        <img src="/assets/images/book-month.png" alt="Book cover">
+        <img src="/assets/images/lewis/book.jpg" alt="Book cover">
       </span>
       <div id="botm-card-text">
-        <h4>The Very Hungry Caterpillar</h4>
-        <p>Book by Eric Carle</p>
+        <h4 style="font-size: 12.5px;">The Lion, the Witch and the Wardrobe</h4>
+        <p>Book by C.S. Lewis</p>
       </div>
     </div>
 
@@ -339,7 +339,7 @@
         card.addEventListener('click', (e) => {
           // Don't navigate if clicking the close button
           if (e.target.id === 'botm-close') return;
-          window.location.href = '/hungry-caterpillar.html';
+          window.location.href = '/lion-witch-wardrobe.html';
         });
 
         closeBtn.addEventListener('click', (e) => {
