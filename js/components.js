@@ -298,7 +298,7 @@
     <div id="botm-card-body">
       <img id="botm-book-img" src="" alt="Book cover" style="display:none;">
       <span id="botm-book-fallback">
-        <img src="/assets/images/lewis/book.jpg" alt="Book cover">
+        <img src="/assets/images/lewis/book.jpeg" alt="Book cover">
       </span>
       <div id="botm-card-text">
         <h4 style="font-size: 12.5px;">The Lion, the Witch and the Wardrobe</h4>
