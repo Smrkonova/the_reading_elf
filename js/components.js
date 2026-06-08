@@ -298,11 +298,11 @@
     <div id="botm-card-body">
       <img id="botm-book-img" src="" alt="Book cover" style="display:none;">
       <span id="botm-book-fallback">
-        <img src="/assets/images/lewis/book.jpeg" alt="Book cover">
+        <img src="/assets/images/frances/book.jpeg" alt="Book cover">
       </span>
       <div id="botm-card-text">
-        <h4 style="font-size: 12.5px;">The Lion, the Witch and the Wardrobe</h4>
-        <p>Book by C.S. Lewis</p>
+        <h4 style="font-size: 12.5px;">The Secret Garden</h4>
+        <p>Book by Frances Hodgson Burnett</p>
       </div>
     </div>
 
@@ -339,7 +339,7 @@
         card.addEventListener('click', (e) => {
           // Don't navigate if clicking the close button
           if (e.target.id === 'botm-close') return;
-          window.location.href = '/lion-witch-wardrobe.html';
+          window.location.href = '/the-secret-garden.html';
         });
 
         closeBtn.addEventListener('click', (e) => {
